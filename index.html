@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Drew Bloomfield — Film Portfolio Draft</title>
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header><div class="wrap nav"><a class="brand" href="#home" aria-label="Drew Bloomfield, home">Drew Bloomfield<span>.</span></a><nav aria-label="Main navigation"><a href="#home">Home</a><a href="#about">About me</a><a href="#latest">Latest work</a><a href="#films">Film work ↗</a></nav></div></header>
+<main id="main">
+<section id="home" class="hero wrap" aria-labelledby="hero-title">
+  <div class="hero-top"><p class="eyebrow"><span class="dot"></span>Film portfolio</p><p class="eyebrow muted">A place for the work.</p></div>
+  <h1 id="hero-title">Drew<span>Bloomfield.</span></h1>
+  <div class="hero-art" role="img" aria-label="Abstract placeholder for a featured film still"><span class="frame-label">Your featured film still</span></div>
+  <div class="hero-bottom"><a href="#films" class="text-link">Explore my films <span class="arrow">↓</span></a><span class="muted">Film, stories, and other interests.</span></div>
+</section>
+<section id="about" class="section wrap rule about" aria-labelledby="about-title">
+  <div><p class="eyebrow muted">01 / Introduction</p><h2 id="about-title">About me.</h2></div>
+  <div><p>Your introduction goes here: who you are, what you love about film, and the kind of work you want to create.</p><p class="note">A little more about your background, your creative interests, and what you bring to a project. We’ll replace this placeholder with your own words.</p></div>
+</section>
+<section id="latest" class="section wrap rule" aria-labelledby="latest-title">
+  <div class="section-head"><h2 id="latest-title">My latest work.</h2><span class="eyebrow muted">02 / Newest project</span></div>
+  <button class="project" type="button" data-project="Your latest film" aria-label="Preview the latest film project layout">
+    <div class="frame latest-frame"><span>Your latest film still</span></div>
+    <div class="project-meta"><div><h3>Your latest film</h3><p>Your role · Year · Running time</p></div><span class="round" aria-hidden="true">↗</span></div>
+  </button>
+  <p class="latest-note">A short introduction to your newest project—what it’s about and what you contributed.</p>
+</section>
+<section id="films" class="films" aria-labelledby="films-title"><div class="wrap">
+  <p class="eyebrow">03 / The portfolio</p>
+  <div class="section-head"><h2 id="films-title">Film work.</h2><p class="films-intro">A larger collection of your films and video projects, with room to explore each one.</p></div>
+  <div class="film-grid">
+    <button class="project" type="button" data-project="Film project 01" aria-label="Preview film project 01 layout"><div class="frame f1"><span>Film still placeholder / 01</span></div><div class="project-meta"><div><h3>Film project 01</h3><p>Your role · Year</p></div><span class="round" aria-hidden="true">↗</span></div></button>
+    <button class="project" type="button" data-project="Film project 02" aria-label="Preview film project 02 layout"><div class="frame f2"><span>Film still placeholder / 02</span></div><div class="project-meta"><div><h3>Film project 02</h3><p>Your role · Year</p></div><span class="round" aria-hidden="true">↗</span></div></button>
+    <button class="project" type="button" data-project="Film project 03" aria-label="Preview film project 03 layout"><div class="frame f3"><span>Film still placeholder / 03</span></div><div class="project-meta"><div><h3>Film project 03</h3><p>Your role · Year</p></div><span class="round" aria-hidden="true">↗</span></div></button>
+    <button class="project" type="button" data-project="Film project 04" aria-label="Preview film project 04 layout"><div class="frame f4"><span>Film still placeholder / 04</span></div><div class="project-meta"><div><h3>Film project 04</h3><p>Your role · Year</p></div><span class="round" aria-hidden="true">↗</span></div></button>
+  </div>
+</div></section>
+</main>
+<footer><div class="wrap footer-row"><span>Drew Bloomfield</span><span class="draft">Layout draft · Sample placeholders</span><a href="#home">Back to top ↑</a></div></footer>
+<dialog id="project-dialog" aria-labelledby="project-title"><div class="dialog-top"><span class="eyebrow">Project layout preview</span><button class="close" type="button">Close ×</button></div><div class="video-placeholder">Your film will appear here</div><h2 id="project-title">Film project</h2><p>Your role · Year · Running time</p><p>This space will introduce the film, explain your contribution, and share any credits or behind-the-scenes details you want visitors to see.</p></dialog>
+<script src="./script.js"></script>
+</body>
+</html>
