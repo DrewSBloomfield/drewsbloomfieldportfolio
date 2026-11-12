@@ -10,34 +10,44 @@ dialog{width:min(760px,92vw);max-height:90vh;overflow:auto;border:1px solid var(
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 
 
-/* Cinematic focus: hovered film previews rise above a dimmed page. */
+/* Film preview focus effect: explicit state avoids relying on :has(). */
 body::after{
   content:"";
   position:fixed;
   inset:0;
-  background:rgba(8,12,10,.66);
+  background:rgba(5,9,7,.72);
   opacity:0;
   visibility:hidden;
   pointer-events:none;
-  z-index:10;
-  transition:opacity .28s ease,visibility .28s ease;
+  z-index:100;
+  transition:opacity .35s ease,visibility .35s ease;
 }
+body.film-focus-active::after{opacity:1;visibility:visible}
 .latest-project,.film-grid .project{
   position:relative;
-  z-index:auto;
-  transform:translateZ(0);
-  transition:transform .28s ease,box-shadow .28s ease;
+  transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s ease;
+  transform-origin:center;
 }
-@media(hover:hover) and (pointer:fine){
-  body:has(.latest-project:hover,.film-grid .project:hover)::after{
-    opacity:1;
-    visibility:visible;
-  }
-  .latest-project:hover,.film-grid .project:hover{
-    z-index:11;
-    transform:scale(1.045);
-    box-shadow:0 24px 60px rgba(0,0,0,.3);
-  }
+body.film-focus-active .latest-project.is-focused,
+body.film-focus-active .film-grid .project.is-focused{
+  z-index:102;
+  transform:scale(1.055);
+  box-shadow:0 25px 70px rgba(0,0,0,.45);
+}
+body.film-focus-active #latest,
+body.film-focus-active #films{
+  position:relative;
+  z-index:101;
+}
+/* The section itself must not cover the dark overlay. */
+body.film-focus-active #latest,
+body.film-focus-active #films{
+  isolation:auto;
+}
+@media(max-width:650px){
+  body::after{display:none}
+  body.film-focus-active .latest-project.is-focused,
+  body.film-focus-active .film-grid .project.is-focused{transform:none;box-shadow:none}
 }
 @media(prefers-reduced-motion:reduce){
   body::after,.latest-project,.film-grid .project{transition:none!important}
