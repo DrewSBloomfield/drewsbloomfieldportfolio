@@ -175,3 +175,38 @@ nav#site-menu.side-menu > a span{
   border-bottom:1px solid var(--line);
 }
 #site-menu.side-menu > a span{float:none !important;margin:0 !important}
+
+/* Isolated menu rows: each link has its own block wrapper. */
+#site-menu .drawer-links{
+  display:block;
+  width:100%;
+  flex:none;
+}
+#site-menu .drawer-row{
+  display:flex;
+  width:100%;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding:20px 0;
+  border-bottom:1px solid var(--line);
+}
+#site-menu .drawer-row > a{
+  display:block;
+  flex:1 1 auto;
+  min-width:0;
+  font:normal clamp(25px,3vw,39px)/1.2 Georgia,serif;
+  text-align:left;
+}
+#site-menu .drawer-row > span{
+  display:block;
+  flex:0 0 auto;
+  font:11px Arial,sans-serif;
+  color:#777;
+}
+#site-menu .drawer-row > a:hover{color:var(--accent)}
+#site-menu.side-menu{
+  display:block !important;
+  width:min(440px,92vw);
+}
+#site-menu .menu-heading{margin-bottom:35px}
