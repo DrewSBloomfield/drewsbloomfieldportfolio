@@ -34,16 +34,6 @@ body.film-focus-active .film-grid .project.is-focused{
   transform:scale(1.055);
   box-shadow:0 25px 70px rgba(0,0,0,.45);
 }
-body.film-focus-active #latest,
-body.film-focus-active #films{
-  position:relative;
-  z-index:101;
-}
-/* The section itself must not cover the dark overlay. */
-body.film-focus-active #latest,
-body.film-focus-active #films{
-  isolation:auto;
-}
 @media(max-width:650px){
   body::after{display:none}
   body.film-focus-active .latest-project.is-focused,
