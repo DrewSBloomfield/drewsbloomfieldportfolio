@@ -42,3 +42,32 @@ body.film-focus-active .film-grid .project.is-focused{
 @media(prefers-reduced-motion:reduce){
   body::after,.latest-project,.film-grid .project{transition:none!important}
 }
+
+/* Small descriptive text areas; original layout and typography remain unchanged elsewhere. */
+.description-box{
+  padding:16px 19px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.24);
+  border-radius:2px;
+  font:14px/1.75 Arial,sans-serif;
+}
+.about .about-description p{
+  font:14px/1.75 Arial,sans-serif;
+}
+.about .about-description .note{
+  margin-top:12px;
+  font:13px/1.7 Arial,sans-serif;
+}
+.latest-note.description-box{
+  max-width:none;
+  margin-top:22px;
+  color:var(--ink);
+}
+.film-description.description-box{
+  margin-top:14px;
+  color:#d4d9cf;
+  background:rgba(255,255,255,.045);
+  border-color:#566054;
+  font-size:13px;
+}
+@media(max-width:650px){.description-box{padding:14px 16px}}
