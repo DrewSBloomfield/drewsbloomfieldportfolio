@@ -21,3 +21,34 @@ filmPreviews.forEach(preview=>{
   });
 });
 document.addEventListener('keydown',event=>{if(event.key==='Escape')setFilmFocus(null)});
+
+/* Corner navigation drawer */
+const menuToggle=document.getElementById('menu-toggle');
+const menu=document.getElementById('site-menu');
+const menuClose=document.getElementById('menu-close');
+const menuBackdrop=document.getElementById('menu-backdrop');
+let menuReturnFocus=null;
+function setMenuOpen(open){
+  menu.classList.toggle('open',open);
+  menu.setAttribute('aria-hidden',String(!open));
+  menu.inert=!open;
+  menuToggle.setAttribute('aria-expanded',String(open));
+  menuToggle.setAttribute('aria-label',open?'Close navigation':'Open navigation');
+  menuBackdrop.hidden=!open;
+  document.body.style.overflow=open?'hidden':'';
+  if(open){menuReturnFocus=document.activeElement;menuClose.focus();}
+  else if(menuReturnFocus){menuReturnFocus.focus();menuReturnFocus=null;}
+}
+menuToggle.addEventListener('click',()=>setMenuOpen(!menu.classList.contains('open')));
+menuClose.addEventListener('click',()=>setMenuOpen(false));
+menuBackdrop.addEventListener('click',()=>setMenuOpen(false));
+menu.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>setMenuOpen(false)));
+document.addEventListener('keydown',event=>{
+ if(event.key==='Escape'&&menu.classList.contains('open'))setMenuOpen(false);
+ if(event.key==='Tab'&&menu.classList.contains('open')){
+   const focusables=[menuClose,...menu.querySelectorAll('a')];
+   const first=focusables[0],last=focusables[focusables.length-1];
+   if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}
+   else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}
+ }
+});
