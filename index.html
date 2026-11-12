@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Drew Bloomfield — Film Portfolio Draft</title>
-<link rel="stylesheet" href="./styles.css">
+<link rel="stylesheet" href="./styles.css?v=navfix4">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -16,10 +16,12 @@
 <div id="menu-backdrop" class="menu-backdrop" hidden></div>
 <nav id="site-menu" class="side-menu" aria-label="Portfolio navigation" aria-hidden="true" inert>
   <div class="menu-heading"><span class="eyebrow">Navigate</span><button id="menu-close" type="button" aria-label="Close navigation">×</button></div>
-  <a href="#home">Home <span>01</span></a>
-  <a href="#about">About me <span>02</span></a>
-  <a href="#latest">Latest work <span>03</span></a>
-  <a href="#films">Film work <span>04</span></a>
+  <div class="drawer-links">
+    <div class="drawer-row"><a href="#home">Home</a><span>01</span></div>
+    <div class="drawer-row"><a href="#about">About me</a><span>02</span></div>
+    <div class="drawer-row"><a href="#latest">Latest work</a><span>03</span></div>
+    <div class="drawer-row"><a href="#films">Film work</a><span>04</span></div>
+  </div>
 </nav>
 <main id="main">
 <section id="home" class="opening wrap" aria-labelledby="hero-title">
