@@ -8,19 +8,35 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header><div class="wrap nav"><a class="brand" href="#home" aria-label="Drew Bloomfield, home">Drew Bloomfield<span>.</span></a><nav aria-label="Main navigation"><a href="#home">Home</a><a href="#about">About me</a><a href="#latest">Latest work</a><a href="#films">Film work ↗</a></nav></div></header>
+<header class="site-header">
+  <button id="menu-toggle" class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open navigation"><span></span><span></span><span></span></button>
+  <a class="header-wordmark" href="#home">Drew Bloomfield<span>.</span></a>
+  <span class="header-label">Film portfolio</span>
+</header>
+<div id="menu-backdrop" class="menu-backdrop" hidden></div>
+<nav id="site-menu" class="side-menu" aria-label="Portfolio navigation" aria-hidden="true" inert>
+  <div class="menu-heading"><span class="eyebrow">Navigate</span><button id="menu-close" type="button" aria-label="Close navigation">×</button></div>
+  <a href="#home">Home <span>01</span></a>
+  <a href="#about">About me <span>02</span></a>
+  <a href="#latest">Latest work <span>03</span></a>
+  <a href="#films">Film work <span>04</span></a>
+</nav>
 <main id="main">
-<section id="home" class="hero wrap" aria-labelledby="hero-title">
-  <div class="hero-top"><p class="eyebrow"><span class="dot"></span>Film portfolio</p><p class="eyebrow muted">A place for the work.</p></div>
-  <h1 id="hero-title">Drew<span>Bloomfield.</span></h1>
-  <div class="hero-art" role="img" aria-label="Abstract placeholder for a featured film still"><span class="frame-label">Your featured film still</span></div>
-  <div class="hero-bottom"><a href="#films" class="text-link">Explore my films <span class="arrow">↓</span></a><span class="muted">Film, stories, and other interests.</span></div>
+<section id="home" class="opening wrap" aria-labelledby="hero-title">
+  <div class="opening-name">
+    <p class="eyebrow muted">Film / Creative portfolio</p>
+    <h1 id="hero-title">Drew<br><em>Bloomfield.</em></h1>
+    <a href="#latest" class="text-link">View latest work <span class="arrow">↓</span></a>
+  </div>
+  <section id="about" class="opening-about" aria-labelledby="about-title">
+    <p class="eyebrow muted">About me / Introduction</p>
+    <div class="about-photo" role="img" aria-label="Placeholder for a portrait photograph"><span>Portrait / photo placeholder</span></div>
+    <h2 id="about-title">About me.</h2>
+    <p>Your introduction goes here: who you are, what you love about film, and the kind of work you want to create.</p>
+    <p class="about-secondary">A little more about your background, your creative interests, and what you bring to a project. We’ll replace this placeholder with your own words.</p>
+  </section>
 </section>
-<section id="about" class="section wrap rule about" aria-labelledby="about-title">
-  <div><p class="eyebrow muted">01 / Introduction</p><h2 id="about-title">About me.</h2></div>
-  <div><p>Your introduction goes here: who you are, what you love about film, and the kind of work you want to create.</p><p class="note">A little more about your background, your creative interests, and what you bring to a project. We’ll replace this placeholder with your own words.</p></div>
-</section>
-<section id="latest" class="section wrap rule" aria-labelledby="latest-title">
+<section id="latest" class="section wrap rule latest-section" aria-labelledby="latest-title">
   <div class="section-head"><h2 id="latest-title">My latest work.</h2><span class="eyebrow muted">02 / Newest project</span></div>
   <div class="latest-project">
     <iframe class="latest-video" src="https://www.youtube-nocookie.com/embed/ia1pxspCJ8E" title="Latest work — film video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display:block;width:100%;aspect-ratio:16/9;border:0"></iframe>
