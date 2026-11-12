@@ -148,3 +148,30 @@ nav#site-menu.side-menu > a span{
   margin-top:12px;
   font:11px Arial,sans-serif;
 }
+
+/* Final drawer layout: override the global nav flex rule with a grid of rows. */
+#site-menu.side-menu{
+  display:grid !important;
+  grid-template-columns:minmax(0,1fr) !important;
+  grid-auto-flow:row !important;
+  grid-auto-rows:max-content;
+  align-content:start;
+  justify-items:stretch;
+  gap:0 !important;
+}
+#site-menu.side-menu .menu-heading{width:100%;margin-bottom:36px}
+#site-menu.side-menu > a{
+  display:flex !important;
+  flex-direction:row !important;
+  align-items:center;
+  justify-content:space-between;
+  width:100% !important;
+  min-width:0;
+  margin:0 !important;
+  padding:18px 0 !important;
+  white-space:normal;
+  font-size:clamp(24px,3vw,38px);
+  line-height:1.2;
+  border-bottom:1px solid var(--line);
+}
+#site-menu.side-menu > a span{float:none !important;margin:0 !important}
