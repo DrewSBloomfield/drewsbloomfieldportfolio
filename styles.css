@@ -86,3 +86,41 @@ body.film-focus-active .film-grid .project.is-focused{
  .latest-section{padding-top:55px}
 }
 @media(prefers-reduced-motion:reduce){.side-menu,.menu-toggle span{transition:none!important}}
+
+/* Navigation repair: sticky header and horizontal drawer links. */
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:150;
+  width:100%;
+  background:rgba(241,238,231,.97);
+  backdrop-filter:blur(12px);
+}
+.side-menu{
+  width:min(820px,94vw);
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  padding:clamp(22px,4vw,42px);
+  overflow-y:auto;
+}
+.side-menu .menu-heading{margin-bottom:clamp(30px,7vh,75px)}
+.side-menu>a{
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:space-between;
+  flex:none;
+  width:100%;
+  font:clamp(24px,4vw,46px)/1.15 Georgia,serif;
+  white-space:normal;
+  overflow-wrap:normal;
+  word-break:normal;
+  padding:18px 0;
+  gap:20px;
+}
+.side-menu>a span{flex:none}
+@media(max-width:650px){
+  .side-menu{width:min(420px,94vw);padding:24px}
+  .side-menu>a{font-size:clamp(25px,7vw,38px);padding:17px 0}
+}
