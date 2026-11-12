@@ -124,3 +124,27 @@ body.film-focus-active .film-grid .project.is-focused{
   .side-menu{width:min(420px,94vw);padding:24px}
   .side-menu>a{font-size:clamp(25px,7vw,38px);padding:17px 0}
 }
+
+/* Explicitly stack navigation links vertically inside the slide-out panel. */
+nav#site-menu.side-menu{
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
+  justify-content:flex-start;
+  gap:0;
+}
+nav#site-menu.side-menu > a{
+  display:block;
+  width:100%;
+  flex:0 0 auto;
+  text-align:left;
+  font:clamp(27px,3.4vw,40px)/1.25 Georgia,serif;
+  padding:20px 0;
+  border-bottom:1px solid var(--line);
+}
+nav#site-menu.side-menu > a span{
+  display:inline-block;
+  float:right;
+  margin-top:12px;
+  font:11px Arial,sans-serif;
+}
