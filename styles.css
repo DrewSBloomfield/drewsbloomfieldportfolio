@@ -71,3 +71,14 @@ body.film-focus-active .film-grid .project.is-focused{
   font-size:13px;
 }
 @media(max-width:650px){.description-box{padding:14px 16px}}
+
+/* Film 01 thumbnail, muted hover playback, and expanded click-to-watch modal. */
+.film-one-stage{position:relative;aspect-ratio:16/9;overflow:hidden;border-radius:2px;background:#151a16}
+.film-one-poster,.film-one-preview{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0}
+.film-one-preview{opacity:0;pointer-events:none;transition:opacity .2s ease}
+.film-one.is-previewing .film-one-preview{opacity:1}
+.film-one-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);display:grid;place-items:center;width:58px;height:58px;border-radius:50%;background:#111b; color:white;font-size:22px;pointer-events:none;transition:opacity .2s ease}
+.film-one.is-previewing .film-one-play{opacity:0}
+#project-dialog:has(#project-video-embed:not([hidden])){width:min(1330px,94vw);padding:clamp(16px,2.5vw,30px)}
+#project-dialog #project-video-embed{max-height:75vh}
+@media(prefers-reduced-motion:reduce){.film-one-preview,.film-one-play{transition:none}}
