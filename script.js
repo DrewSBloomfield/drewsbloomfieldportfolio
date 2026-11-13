@@ -33,3 +33,25 @@ filmPreviews.forEach(preview=>{
   });
 });
 document.addEventListener('keydown',event=>{if(event.key==='Escape')setFilmFocus(null)});
+
+/* Load Film 01 only on hover: muted autoplay is required by browsers. */
+const filmOne=document.querySelector('.film-one');
+const filmOnePreview=filmOne?.querySelector('.film-one-preview');
+const filmOneHoverUrl='https://www.youtube-nocookie.com/embed/oAjmPuEGb8M?autoplay=1&mute=1&controls=0&playsinline=1&loop=1&playlist=oAjmPuEGb8M';
+function stopFilmOnePreview(){
+  if(!filmOnePreview)return;
+  filmOne.classList.remove('is-previewing');
+  filmOnePreview.removeAttribute('src');
+}
+if(filmOne&&filmOnePreview){
+  filmOne.addEventListener('pointerenter',event=>{
+    if(!canHover.matches||event.pointerType==='touch')return;
+    filmOnePreview.src=filmOneHoverUrl;
+    filmOne.classList.add('is-previewing');
+  });
+  filmOne.addEventListener('pointerleave',stopFilmOnePreview);
+  filmOne.addEventListener('click',()=>{
+    stopFilmOnePreview();
+    setFilmFocus(null);
+  });
+}
