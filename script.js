@@ -1,6 +1,7 @@
 const films={
   pages:{title:'Pages',role:'Director / Editor',id:'ia1pxspCJ8E',description:'A film made for my older sister’s wedding, set to a song written by my dad. The goal was to create something emotional and tearjerking.'},
-  'data-op':{title:'DATA OP',role:'Director / Writer',id:'oAjmPuEGb8M',description:'Project description and creative reflection to be added.'}
+  'data-op':{title:'DATA OP',role:'Director / Writer',id:'oAjmPuEGb8M',description:'Project description and creative reflection to be added.'},
+  'pineapple-incident':{title:'The Pineapple Incident',role:'Editor / Actor for John',id:'WtntfiZmZZ4',description:'A satirical short, written by the Actor for Maria and Directed by a classmate, and edited by me, as a project for our Audio for Digital Film class.'}
 };
 const dialog=document.getElementById('film-dialog');
 const player=document.getElementById('dialog-player');
