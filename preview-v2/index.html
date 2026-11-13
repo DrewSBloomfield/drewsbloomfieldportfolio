@@ -6,8 +6,8 @@
 <meta name="theme-color" content="#202720">
 <meta name="description" content="Drew Bloomfield — film and storytelling portfolio featuring Pages and DATA OP.">
 <title>Drew Bloomfield | Film Portfolio</title>
-<link rel="stylesheet" href="./styles.css?v=archive-20261113">
-<script src="./script.js" defer></script>
+<link rel="stylesheet" href="./styles.css?v=cinematic-20261113b">
+<script src="./script.js?v=cinematic-20261113b" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -33,13 +33,13 @@
   <div class="opening-bottom"><span>STORY / IMAGE / SOUND</span><span>SCROLL TO EXPLORE ↓</span></div>
 </section>
 <section id="work" class="work-section" aria-labelledby="work-title">
-  <div class="section-heading"><p class="eyebrow">01 / Latest work</p><h2 id="work-title">The latest work<span>.</span></h2><p>The latest films: Pages is featured at a larger scale, with DATA OP beside it as the second latest project.</p></div>
+  <div class="section-heading"><p class="eyebrow">01 / Latest work</p><h2 id="work-title">The latest work<span>.</span></h2><p>Pages is the newest film, with DATA OP presented alongside it as the second latest.</p></div>
   <div class="work-layout">
     <article class="film-feature" id="pages">
       <div class="film-kicker"><span>FEATURED / LATEST WORK</span><span>01 — 02</span></div>
-      <button class="film-image" type="button" data-film="pages" aria-label="Watch Pages in expanded player">
+      <button class="film-image hover-film" type="button" data-film="pages" aria-label="Watch Pages in expanded player">
         <img src="https://i.ytimg.com/vi/ia1pxspCJ8E/hqdefault.jpg" alt="Thumbnail for Pages" loading="lazy">
-        <span class="play-icon" aria-hidden="true">▶</span>
+        <iframe class="hover-preview" tabindex="-1" title="Muted film preview" aria-hidden="true" allow="autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe><span class="play-icon" aria-hidden="true">▶</span>
         <span class="image-action">WATCH FILM ↗</span>
       </button>
       <div class="film-title-line"><h3>Pages</h3><span>DIRECTOR / EDITOR</span></div>
@@ -48,9 +48,9 @@
     </article>
     <article class="film-secondary" id="data-op">
       <div class="film-kicker"><span>SECOND LATEST WORK</span><span>02 — 02</span></div>
-      <button class="film-image" type="button" data-film="data-op" aria-label="Watch DATA OP in expanded player">
+      <button class="film-image hover-film" type="button" data-film="data-op" aria-label="Watch DATA OP in expanded player">
         <img src="https://i.ytimg.com/vi/oAjmPuEGb8M/hqdefault.jpg" alt="Thumbnail for DATA OP" loading="lazy">
-        <span class="play-icon" aria-hidden="true">▶</span>
+        <iframe class="hover-preview" tabindex="-1" title="Muted film preview" aria-hidden="true" allow="autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe><span class="play-icon" aria-hidden="true">▶</span>
         <span class="image-action">WATCH FILM ↗</span>
       </button>
       <div class="film-title-line"><h3>DATA OP</h3><span>DIRECTOR / WRITER</span></div>
@@ -73,13 +73,13 @@
   <div class="archive-heading">
     <p class="eyebrow">03 / Film projects</p>
     <h2 id="films-title">Film projects<span>.</span></h2>
-    <p>An expanding collection of film projects. Each square contains a film preview area and a space for its description, creative roles, and production notes.</p>
+    <p>An expanding collection of film projects. A growing collection of films, with video previews, roles, and project descriptions.</p>
   </div>
   <div class="archive-grid">
     <article class="archive-card">
-      <button class="archive-media" type="button" data-film="data-op" aria-label="Watch DATA OP in expanded player">
+      <button class="archive-media hover-film" type="button" data-film="data-op" aria-label="Watch DATA OP in expanded player">
         <img src="https://i.ytimg.com/vi/oAjmPuEGb8M/hqdefault.jpg" alt="DATA OP video thumbnail" loading="lazy">
-        <span class="play-icon" aria-hidden="true">▶</span>
+        <iframe class="hover-preview" tabindex="-1" title="Muted film preview" aria-hidden="true" allow="autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe><span class="play-icon" aria-hidden="true">▶</span>
       </button>
       <div class="archive-info"><span class="eyebrow">01 / DIRECTOR · WRITER</span><h3>DATA OP</h3><p>Project description placeholder — add the synopsis, creative decisions, and your contributions here.</p></div>
     </article>
@@ -115,7 +115,7 @@
 <dialog id="film-dialog" aria-labelledby="dialog-title">
   <div class="dialog-top"><div><p class="eyebrow">NOW VIEWING</p><h2 id="dialog-title">Film</h2></div><button id="close-dialog" type="button" aria-label="Close video">Close ×</button></div>
   <div class="player-frame"><iframe id="dialog-player" title="Film playback" allow="autoplay; encrypted-media; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
-  <p id="dialog-role"></p><a id="dialog-link" href="#" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a>
+  <p id="dialog-role"></p><p id="dialog-description"></p><a id="dialog-link" href="#" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a>
 </dialog>
 </body>
 </html>
