@@ -1,46 +1,31 @@
-# Drew Bloomfield — Portfolio
+# Drew Bloomfield — Portfolio V2 (review branch)
 
-This package contains the current portfolio draft, ready for a static website host such as GitHub Pages. No software installation, build command, or API key is needed.
+This is an **unpublished redesign proposal**. Do not merge until Drew approves the design and content.
 
-## Included files
+## Architecture
+- `index.html`: page sections, authentic supplied copy, video thumbnail and links.
+- `styles.css`: palette, typography, layout, mobile rules.
+- `script.js`: accessible enlarged video dialog and film metadata.
 
-| File | Purpose |
-| --- | --- |
-| `index.html` | Homepage content: title, About Me, My Latest Work, and the larger film portfolio |
-| `styles.css` | Colors, fonts, layout, and mobile styling |
-| `script.js` | Opens and closes the project previews |
-| `README.md` | These instructions |
+No build process or package manager is required. GitHub Pages can serve these files from the repository root.
 
-All current visual placeholders are drawn in CSS. There are no missing image or font files. Actual film videos, stills, biography, and project details still need to be added. This package does not add a drag-and-drop editor.
+## Preview
+Download this branch as a ZIP, extract it, and open `index.html` in a browser. YouTube media requires internet. A feature branch does **not** automatically get its own GitHub Pages URL.
 
-## Preview on your computer
+## Editing a film
+1. In `index.html`, find the film article (e.g., `id="pages"` or `id="data-op"`). Edit title, role, description, and thumbnail URL.
+2. In `script.js`, update the corresponding `films` entry with the correct YouTube video ID.
+3. For a new film, duplicate an article inside `.work-layout`, give it a unique `data-film` value, and add the matching `films` entry.
+4. Keep descriptions in the student's own words and confirm all credits before publishing.
 
-Extract the ZIP, keep the files together, and double-click `index.html` to open it in your browser.
+## Outstanding content
+- Confirm or revise the exact bio excerpts used here; the text is quoted verbatim from Drew's supplied wording.
+- Provide a professional contact email or link and approve publication.
+- Supply DATA OP synopsis, creative decisions and reflection.
+- Supply additional details for Pages, including production year/runtime if desired.
+- Approve the images/YouTube thumbnails; these currently use the two provided YouTube IDs.
+- Decide whether to add additional real projects or remove unused placeholders from production (this V2 displays only two).
+- Test media embed permissions, mobile browsers, keyboard access, and reduced motion on a real device.
 
-## Upload to GitHub
-
-1. Sign in at https://github.com and create a new repository named `portfolio`. A public repository works with GitHub Free. Initialize it with a README if you want to see the usual file-upload controls immediately.
-2. Open the repository and choose **Add file → Upload files**. For an empty repository, use its **uploading an existing file** link.
-3. Upload the four extracted files. Upload the files themselves, not the ZIP or its enclosing folder. `index.html`, `styles.css`, and `script.js` must be together at the repository's top level. The included README can replace the starter README.
-4. Save the upload with a commit message such as `Add portfolio website`. If you create a separate branch, merge its pull request before publishing from `main`.
-
-## Publish with GitHub Pages
-
-1. Open the repository's **Settings → Pages**.
-2. Under **Build and deployment**, set **Source** to **Deploy from a branch**.
-3. Select the branch containing your files, usually **main**, and **/(root)**. Click **Save**.
-4. When deployment completes, open the website link shown in Pages settings. For a repository named `portfolio`, it is normally `https://YOUR-USERNAME.github.io/portfolio/`.
-
-The Pages website is public when published. The supplied ZIP has not been uploaded or published for you.
-
-## Make changes later
-
-Edit text in `index.html`, appearance in `styles.css`, and interactions in `script.js`. Colors are defined at the top of `styles.css`. Keep the file names unchanged. Upload updated files to the same repository to publish changes.
-
-You can also send these files back to ChatGPT with the changes you want.
-
-## Official GitHub instructions
-
-- Upload files: https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository
-- Set up Pages: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
-- Entry file and site URLs: https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site
+## Publishing
+Review the pull request, test the branch locally, approve the content, then merge into `main`. GitHub Pages should update if configured to publish from `main` / `(root)`.
