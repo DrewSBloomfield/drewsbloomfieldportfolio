@@ -15,7 +15,7 @@ body::after{
   content:"";
   position:fixed;
   inset:0;
-  background:rgba(5,9,7,.72);
+  background:rgba(5,9,7,.576);
   opacity:0;
   visibility:hidden;
   pointer-events:none;
@@ -31,7 +31,7 @@ body.film-focus-active::after{opacity:1;visibility:visible}
 body.film-focus-active .latest-project.is-focused,
 body.film-focus-active .film-grid .project.is-focused{
   z-index:102;
-  transform:scale(1.055);
+  transform:scale(1.03);
   box-shadow:0 25px 70px rgba(0,0,0,.45);
 }
 @media(max-width:650px){
