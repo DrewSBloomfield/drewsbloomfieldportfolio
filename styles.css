@@ -54,3 +54,14 @@ body.film-focus-active .hover-film.is-focused{z-index:100;transform:scale(1.03);
 @media(max-width:850px){.work-layout{grid-template-columns:1fr}.film-secondary{margin-top:25px}}
 @media(max-width:580px){.archive-grid{grid-template-columns:1fr}.archive-media,.archive-placeholder{aspect-ratio:16/9}#film-dialog{width:94vw}body::after{display:none}body.film-focus-active .hover-film.is-focused{transform:none;box-shadow:none}}
 @media(prefers-reduced-motion:reduce){.hover-film,.hover-film .hover-preview,body::after{transition:none!important}}
+
+/* Compact biography with skills, experience, and professional contact. */
+.about-content>p{font-size:15px;line-height:1.7;margin-bottom:14px}
+.about-content .about-lead{font-size:clamp(21px,2vw,29px);line-height:1.45}
+.about-content .practice{margin-top:26px;padding-top:20px}
+.about-content .practice>p:nth-child(2){font:14px/1.65 Arial,sans-serif;margin-top:12px}
+.about-content .practice .experience-summary{font:13px/1.75 Arial,sans-serif;color:var(--muted);margin-top:14px}
+.about-contact{border-top:1px solid var(--line);margin-top:22px;padding-top:18px;display:flex;flex-wrap:wrap;column-gap:22px;row-gap:10px;align-items:baseline}
+.about-contact .eyebrow{flex-basis:100%}
+.about-contact a{font-size:13px;border-bottom:1px solid currentColor;overflow-wrap:anywhere}
+@media(max-width:520px){.about-content>p{font-size:15px}.about-content .about-lead{font-size:23px}}
