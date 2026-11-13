@@ -32,3 +32,25 @@
 .archive-empty .archive-info{opacity:.83}
 @media(max-width:900px){.archive-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:580px){.archive-grid{grid-template-columns:1fr}.archive-heading{margin-bottom:40px}.archive-media{aspect-ratio:1/1}}
+
+/* Film-first review refinements: side-by-side hierarchy and two-column archive. */
+.work-layout{max-width:1350px;grid-template-columns:minmax(0,1.35fr) minmax(0,.85fr);gap:clamp(24px,4vw,64px);align-items:start}
+.film-feature{max-width:none}
+.film-secondary{margin-top:clamp(70px,9vw,150px)}
+.archive-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(34px,5vw,72px) clamp(22px,4vw,56px)}
+.archive-media{aspect-ratio:16/9}
+.archive-media img{width:100%;height:100%;object-fit:cover}
+.archive-placeholder{aspect-ratio:16/9}
+.hover-film{isolation:isolate;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s ease}
+.hover-film .hover-preview{position:absolute;inset:0;width:100%;height:100%;border:0;opacity:0;pointer-events:none;z-index:1;transition:opacity .2s ease}
+.hover-film.is-previewing .hover-preview{opacity:1}
+.hover-film .play-icon,.hover-film .image-action{z-index:2}
+.hover-film.is-previewing .play-icon{opacity:0}
+body::after{content:"";position:fixed;inset:0;background:rgba(5,9,7,.576);opacity:0;visibility:hidden;pointer-events:none;z-index:90;transition:opacity .35s ease,visibility .35s ease}
+body.film-focus-active::after{opacity:1;visibility:visible}
+body.film-focus-active .hover-film.is-focused{z-index:100;transform:scale(1.03);box-shadow:0 24px 65px rgba(0,0,0,.42)}
+#film-dialog{width:min(70vw,1250px);max-width:95vw;max-height:92vh;overflow:auto}
+#dialog-description{font:14px/1.65 Georgia,serif;margin-top:12px;color:var(--muted);max-width:820px}
+@media(max-width:850px){.work-layout{grid-template-columns:1fr}.film-secondary{margin-top:25px}}
+@media(max-width:580px){.archive-grid{grid-template-columns:1fr}.archive-media,.archive-placeholder{aspect-ratio:16/9}#film-dialog{width:94vw}body::after{display:none}body.film-focus-active .hover-film.is-focused{transform:none;box-shadow:none}}
+@media(prefers-reduced-motion:reduce){.hover-film,.hover-film .hover-preview,body::after{transition:none!important}}
