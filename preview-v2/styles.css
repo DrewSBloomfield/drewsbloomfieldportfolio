@@ -73,3 +73,9 @@ body.film-focus-active .hover-film.is-focused{z-index:100;transform:scale(1.03);
 .contact-links{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;margin-bottom:26px}
 .contact-links a{font-size:clamp(13px,1.2vw,15px);border-bottom:1px solid currentColor;padding-bottom:4px;overflow-wrap:anywhere}
 .contact-section>.underlined-link{font-size:12px}
+
+/* Portrait within About heading column; other sections unchanged. */
+.about-heading h2{font-size:clamp(43px,5vw,74px);line-height:1.07}
+.about-portrait{margin:32px 0 0;max-width:100%;overflow:hidden}
+.about-portrait img{width:100%;height:auto;display:block;aspect-ratio:4/3;object-fit:cover;object-position:center}
+@media(max-width:850px){.about-portrait{max-width:560px}}
