@@ -65,7 +65,8 @@ const testimonialTrack=document.getElementById('testimonials-track');
 const testimonialCards=[...testimonialTrack.querySelectorAll('.testimonial-card')];
 const testimonialPosition=document.getElementById('testimonial-position');
 function testimonialStep(direction){
-  const current=testimonialCards.reduce((best,card,i)=>Math.abs(card.offsetLeft-testimonialTrack.scrollLeft)<Math.abs(testimonialCards[best].offsetLeft-testimonialTrack.scrollLeft)?i:best,0);
+  const trackLeft=testimonialTrack.getBoundingClientRect().left;
+  const current=testimonialCards.reduce((best,card,i)=>Math.abs(card.getBoundingClientRect().left-trackLeft)<Math.abs(testimonialCards[best].getBoundingClientRect().left-trackLeft)?i:best,0);
   const next=Math.max(0,Math.min(testimonialCards.length-1,current+direction));
   testimonialCards[next].scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'nearest',inline:'start'});
 }
