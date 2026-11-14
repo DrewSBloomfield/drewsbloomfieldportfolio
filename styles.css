@@ -128,3 +128,17 @@ body.film-focus-active .hover-film.is-focused{z-index:100;transform:scale(1.03);
 @media(max-width:520px){
   .testimonial-card{flex-basis:92%}
 }
+
+/* Definitive three-card testimonial carousel. */
+@media(min-width:901px){
+  #testimonials .testimonials-track{display:flex;gap:20px;scroll-snap-type:x mandatory}
+  #testimonials .testimonial-card{
+    flex:0 0 calc((100% - 40px)/3);
+    width:calc((100% - 40px)/3);
+    min-width:0;
+    min-height:420px;
+    padding:26px;
+  }
+}
+#testimonials .testimonial-quote{flex:1;min-height:245px;padding-top:26px}
+#testimonials .testimonial-card{box-sizing:border-box}
