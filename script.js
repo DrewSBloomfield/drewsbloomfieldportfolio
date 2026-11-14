@@ -59,3 +59,19 @@ hoverFilms.forEach(button=>{
   button.addEventListener('click',()=>stopHoverPreview(button));
 });
 dialog.addEventListener('close',()=>hoverFilms.forEach(stopHoverPreview));
+
+/* Scroll-snap testimonial carousel, usable by touch, mouse and keyboard. */
+const testimonialTrack=document.getElementById('testimonials-track');
+const testimonialCards=[...testimonialTrack.querySelectorAll('.testimonial-card')];
+const testimonialPosition=document.getElementById('testimonial-position');
+function testimonialStep(direction){
+  const current=testimonialCards.reduce((best,card,i)=>Math.abs(card.offsetLeft-testimonialTrack.scrollLeft)<Math.abs(testimonialCards[best].offsetLeft-testimonialTrack.scrollLeft)?i:best,0);
+  const next=Math.max(0,Math.min(testimonialCards.length-1,current+direction));
+  testimonialCards[next].scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'nearest',inline:'start'});
+}
+document.getElementById('testimonial-prev').addEventListener('click',()=>testimonialStep(-1));
+document.getElementById('testimonial-next').addEventListener('click',()=>testimonialStep(1));
+testimonialTrack.addEventListener('scroll',()=>{
+  const index=testimonialCards.reduce((best,card,i)=>Math.abs(card.getBoundingClientRect().left-testimonialTrack.getBoundingClientRect().left)<Math.abs(testimonialCards[best].getBoundingClientRect().left-testimonialTrack.getBoundingClientRect().left)?i:best,0);
+  testimonialPosition.textContent=(index+1)+' / '+testimonialCards.length;
+},{passive:true});
