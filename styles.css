@@ -108,3 +108,23 @@ body.film-focus-active .hover-film.is-focused{z-index:100;transform:scale(1.03);
 @media(max-width:700px){.testimonial-card{flex-basis:85%}.testimonials-heading h2{font-size:clamp(40px,9vw,65px)}}
 @media(max-width:520px){.site-header nav{gap:8px;flex-wrap:wrap;justify-content:flex-end}.site-header nav a{font-size:10px}.testimonial-card{flex-basis:92%}}
 @media(prefers-reduced-motion:reduce){.testimonials-track{scroll-behavior:auto}}
+
+/* Testimonial refinement: three narrower cards per desktop row and taller quote area. */
+.testimonial-card{
+  flex:0 0 calc((100% - 44px)/3);
+  min-height:390px;
+  gap:20px;
+}
+.testimonial-quote{
+  min-height:220px;
+  padding-top:28px;
+}
+@media(max-width:900px){
+  .testimonial-card{flex-basis:calc((100% - 22px)/2)}
+}
+@media(max-width:700px){
+  .testimonial-card{flex-basis:85%}
+}
+@media(max-width:520px){
+  .testimonial-card{flex-basis:92%}
+}
