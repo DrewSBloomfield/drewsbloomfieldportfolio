@@ -1,57 +1,162 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Drew Bloomfield — Film Portfolio Draft</title>
-<link rel="stylesheet" href="./styles.css?v=film01-20261113">
+<meta name="theme-color" content="#202720">
+<meta name="description" content="Drew Bloomfield — film and storytelling portfolio featuring Pages and DATA OP.">
+<title>Drew Bloomfield | Film Portfolio</title>
+<link rel="stylesheet" href="./styles.css?v=testimonials-three-column-20261113-1946">
+<script src="./script.js?v=testimonials-20261113" defer></script>
+<style id="testimonial-layout-v3">
+/* In-page override guarantees this layout loads with the HTML, regardless of cached CSS. */
+#testimonials #testimonials-track{display:grid!important;grid-auto-flow:column!important;grid-auto-columns:calc((100% - 40px)/3)!important;grid-template-columns:none!important;gap:20px!important;overflow-x:auto!important;scroll-snap-type:x mandatory!important;align-items:stretch!important}
+#testimonials #testimonials-track>.testimonial-card{box-sizing:border-box!important;width:100%!important;min-width:0!important;max-width:none!important;min-height:440px!important;flex:none!important;padding:24px!important;scroll-snap-align:start!important}
+#testimonials .testimonial-quote{min-height:265px!important;flex:1!important;padding-top:28px!important}
+@media(max-width:900px){#testimonials #testimonials-track{grid-auto-columns:calc((100% - 20px)/2)!important}}
+@media(max-width:700px){#testimonials #testimonials-track{grid-auto-columns:85%!important}}
+@media(max-width:520px){#testimonials #testimonials-track{grid-auto-columns:92%!important}}
+</style>
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<header><div class="wrap nav"><a class="brand" href="#home" aria-label="Drew Bloomfield, home">Drew Bloomfield<span>.</span></a><nav aria-label="Main navigation"><a href="#home">Home</a><a href="#about">About me</a><a href="#latest">Latest work</a><a href="#films">Film work ↗</a></nav></div></header>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <a class="wordmark" href="#home">Drew Bloomfield<span>.</span></a>
+  <nav aria-label="Main navigation"><a href="#work">Latest</a><a href="#about">About</a><a href="#films">Films</a><a href="#testimonials">Testimonials</a><a href="#contact">Contact</a></nav>
+  <span class="header-index">FILM / PORTFOLIO</span>
+</header>
 <main id="main">
-<section id="home" class="hero wrap" aria-labelledby="hero-title">
-  <div class="hero-top"><p class="eyebrow"><span class="dot"></span>Film portfolio</p><p class="eyebrow muted">A place for the work.</p></div>
-  <h1 id="hero-title">Drew<span>Bloomfield.</span></h1>
-  <div class="hero-art" role="img" aria-label="Abstract placeholder for a featured film still"><span class="frame-label">Your featured film still</span></div>
-  <div class="hero-bottom"><a href="#films" class="text-link">Explore my films <span class="arrow">↓</span></a><span class="muted">Film, stories, and other interests.</span></div>
-</section>
-<section id="about" class="section wrap rule about" aria-labelledby="about-title">
-  <div><p class="eyebrow muted">01 / Introduction</p><h2 id="about-title">About me.</h2></div>
-  <div class="description-box about-description"><p>Your introduction goes here: who you are, what you love about film, and the kind of work you want to create.</p><p class="note">A little more about your background, your creative interests, and what you bring to a project. We’ll replace this placeholder with your own words.</p></div>
-</section>
-<section id="latest" class="section wrap rule" aria-labelledby="latest-title">
-  <div class="section-head"><h2 id="latest-title">My latest work.</h2><span class="eyebrow muted">02 / Newest project</span></div>
-  <div class="latest-project">
-    <iframe class="latest-video" src="https://www.youtube-nocookie.com/embed/ia1pxspCJ8E" title="Latest work — film video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display:block;width:100%;aspect-ratio:16/9;border:0"></iframe>
-    <div class="project-meta"><div><h3>Your latest film</h3><p>Your role · Year · Running time</p></div><a class="round" href="https://youtu.be/ia1pxspCJ8E" target="_blank" rel="noopener noreferrer" aria-label="Watch latest film on YouTube">↗</a></div>
+<section id="home" class="opening" aria-labelledby="opening-title">
+  <div class="opening-copy">
+    <p class="eyebrow">Independent stories / Creative practice</p>
+    <h1 id="opening-title">Drew<br><em>Bloomfield.</em></h1>
+    <p class="opening-identity">Film & storytelling</p>
+    <a class="underlined-link" href="#work">Explore the work <span aria-hidden="true">↘</span></a>
   </div>
-  <p class="latest-note description-box">A short introduction to your newest project—what it’s about and what you contributed.</p>
+  <a class="opening-media" href="#work" aria-label="Explore Pages, featured film">
+    <img src="https://i.ytimg.com/vi/ia1pxspCJ8E/maxresdefault.jpg?v=20261113" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/ia1pxspCJ8E/hqdefault.jpg?v=20261113'" alt="Thumbnail from Pages" fetchpriority="high">
+    <div class="media-scrim"></div>
+    <span class="media-number">01 / FEATURED WORK</span>
+    <div class="media-bottom"><strong>Pages</strong><span>DIRECTOR / EDITOR &nbsp; ↗</span></div>
+  </a>
+  <div class="opening-bottom"><span>STORY / IMAGE / SOUND</span><span>SCROLL TO EXPLORE ↓</span></div>
 </section>
-<section id="films" class="films" aria-labelledby="films-title"><div class="wrap">
-  <p class="eyebrow">03 / The portfolio</p>
-  <div class="section-head"><h2 id="films-title">Film work.</h2><p class="films-intro">A larger collection of your films and video projects, with room to explore each one.</p></div>
-  <div class="film-grid">
-    <button class="project film-one" type="button" data-project="Film project 01" aria-label="Open Film Project 01 video in enlarged player">
-      <div class="film-one-stage">
-        <img class="film-one-poster" src="https://i.ytimg.com/vi/oAjmPuEGb8M/hqdefault.jpg" alt="Film Project 01 video thumbnail" loading="lazy">
-        <iframe class="film-one-preview" title="Film Project 01 muted hover preview" tabindex="-1" aria-hidden="true" allow="autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-        <span class="film-one-play" aria-hidden="true">▶</span>
-      </div>
-      <div class="project-meta"><div><h3>Film project 01</h3><p>Your role · Year</p></div><span class="round" aria-hidden="true">↗</span></div>
-    </button>
-    <p class="film-description description-box">Project description placeholder — add your own summary, creative role, and production details here.</p>
-    <button class="project" type="button" data-project="Film project 02" aria-label="Preview film project 02 layout"><div class="frame f2"><span>Film still placeholder / 02</span></div><div class="project-meta"><div><h3>Film project 02</h3><p>Your role · Year</p></div><span class="round" aria-hidden="true">↗</span></div></button>
-    <p class="film-description description-box">Project description placeholder — add your own summary, creative role, and production details here.</p>
-    <button class="project" type="button" data-project="Film project 03" aria-label="Preview film project 03 layout"><div class="frame f3"><span>Film still placeholder / 03</span></div><div class="project-meta"><div><h3>Film project 03</h3><p>Your role · Year</p></div><span class="round" aria-hidden="true">↗</span></div></button>
-    <p class="film-description description-box">Project description placeholder — add your own summary, creative role, and production details here.</p>
-    <button class="project" type="button" data-project="Film project 04" aria-label="Preview film project 04 layout"><div class="frame f4"><span>Film still placeholder / 04</span></div><div class="project-meta"><div><h3>Film project 04</h3><p>Your role · Year</p></div><span class="round" aria-hidden="true">↗</span></div></button>
-    <p class="film-description description-box">Project description placeholder — add your own summary, creative role, and production details here.</p>
+<section id="work" class="work-section" aria-labelledby="work-title">
+  <div class="section-heading"><p class="eyebrow">01 / Latest work</p><h2 id="work-title">The latest work<span>.</span></h2><p>Pages is the newest film, with DATA OP presented alongside it as the second latest.</p></div>
+  <div class="work-layout">
+    <article class="film-feature" id="pages">
+      <div class="film-kicker"><span>FEATURED / LATEST WORK</span><span>01 — 02</span></div>
+      <button class="film-image hover-film" type="button" data-film="pages" aria-label="Watch Pages in expanded player">
+        <img src="https://i.ytimg.com/vi/ia1pxspCJ8E/maxresdefault.jpg?v=20261113" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/ia1pxspCJ8E/hqdefault.jpg?v=20261113'" alt="Thumbnail for Pages" loading="lazy">
+        <iframe class="hover-preview" tabindex="-1" title="Muted film preview" aria-hidden="true" allow="autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe><span class="play-icon" aria-hidden="true">▶</span>
+        <span class="image-action">WATCH FILM ↗</span>
+      </button>
+      <div class="film-title-line"><h3>Pages</h3><span>DIRECTOR / EDITOR</span></div>
+      <div class="film-notes"><p class="eyebrow">THE STORY</p><p>It is my Dad's song he wrote about my older Sister, and was made to represent her wedding. Although it is a song designed to be relatable for any father who's daughter is getting married.</p><p class="eyebrow">CREATIVE INTENTION</p><p>I wanted the project to be emotional and tearjerking.</p><p class="note-muted">Additional production details and reflection can be added later.</p></div>
+      <a class="film-direct" href="https://youtu.be/ia1pxspCJ8E" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a>
+    </article>
+    <article class="film-secondary" id="data-op">
+      <div class="film-kicker"><span>SECOND LATEST WORK</span><span>02 — 02</span></div>
+      <button class="film-image hover-film" type="button" data-film="data-op" aria-label="Watch DATA OP in expanded player">
+        <img src="https://i.ytimg.com/vi/oAjmPuEGb8M/hqdefault.jpg" alt="Thumbnail for DATA OP" loading="lazy">
+        <iframe class="hover-preview" tabindex="-1" title="Muted film preview" aria-hidden="true" allow="autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe><span class="play-icon" aria-hidden="true">▶</span>
+        <span class="image-action">WATCH FILM ↗</span>
+      </button>
+      <div class="film-title-line"><h3>DATA OP</h3><span>DIRECTOR / WRITER</span></div>
+      <p class="film-pending">Project synopsis, creative decisions, and production reflection to be supplied.</p>
+      <a class="film-direct" href="https://youtu.be/oAjmPuEGb8M" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a>
+    </article>
   </div>
-</div></section>
+</section>
+<section id="about" class="about-section" aria-labelledby="about-title">
+  <div class="about-heading"><p class="eyebrow">02 / Behind the work</p><h2 id="about-title">The person<br>behind<br>the frame<span>.</span></h2><figure class="about-portrait"><div class="portrait-placeholder" role="img" aria-label="Placeholder for Drew Bloomfield's professional portrait"><span>PORTRAIT / IMAGE PLACEHOLDER</span><small>Professional photograph to be added</small></div></figure></div>
+  <div class="about-content">
+    <p class="about-lead">I have always been interested in storytelling my entire life.</p>
+    <p>Throughout my life I have experimented with many forms of creative expression, but there was one that finally stood out as the solution. I landed on screenwriting and film.</p>
+    <p>I had always liked making and editing random little videos, and finally realized that it was the perfect medium of storytelling for me.</p>
+    <p>They can immerse you into a new world, with characters you have never seen before and may now explore their lives.</p>
+    <div class="practice"><p class="eyebrow">SKILLS & PRODUCTION EXPERIENCE</p><p>Adobe Premiere Pro / Adobe Photoshop / Camera Operation / Lighting / Microphone Operation / Digital Editing</p><p class="experience-summary">Media Producer / Director for the Cedarville Supermileage Team, filming race footage and editing promotional videos. Previously a Content Producer intern at Brain Trust, producing marketing and social media videos, employee vision videos, and a podcast sizzle reel. Additional camera and technical production experience through volunteer work at Crossroads Church and River’s Crossing Community Church.</p></div><div class="about-contact"><p class="eyebrow">CONTACT</p><a href="mailto:drewbloomfield@cedarville.edu">drewbloomfield@cedarville.edu ↗</a><a href="https://www.linkedin.com/in/drewbl/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="./assets/Drew-Bloomfield-Resume-2026.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open Drew Bloomfield resume PDF">Resume ↗</a></div>
+  </div>
+</section>
+<section id="films" class="archive-section" aria-labelledby="films-title">
+  <div class="archive-heading">
+    <p class="eyebrow">03 / Film projects</p>
+    <h2 id="films-title">Film projects<span>.</span></h2>
+    <p>An expanding collection of film projects. A growing collection of films, with video previews, roles, and project descriptions.</p>
+  </div>
+  <div class="archive-grid">
+    <article class="archive-card">
+      <button class="archive-media hover-film" type="button" data-film="data-op" aria-label="Watch DATA OP in expanded player">
+        <img src="https://i.ytimg.com/vi/oAjmPuEGb8M/hqdefault.jpg" alt="DATA OP video thumbnail" loading="lazy">
+        <iframe class="hover-preview" tabindex="-1" title="Muted film preview" aria-hidden="true" allow="autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe><span class="play-icon" aria-hidden="true">▶</span>
+      </button>
+      <div class="archive-info"><span class="eyebrow">01 / DIRECTOR · WRITER</span><h3>DATA OP</h3><p>Project description placeholder — add the synopsis, creative decisions, and your contributions here.</p></div>
+    </article>
+    <article class="archive-card">
+      <button class="archive-media hover-film" type="button" data-film="pineapple-incident" aria-label="Watch The Pineapple Incident in expanded player">
+        <img src="https://i.ytimg.com/vi/WtntfiZmZZ4/hqdefault.jpg" alt="The Pineapple Incident video thumbnail" loading="lazy">
+        <iframe class="hover-preview" tabindex="-1" title="Muted preview of The Pineapple Incident" aria-hidden="true" allow="autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        <span class="play-icon" aria-hidden="true">▶</span>
+      </button>
+      <div class="archive-info"><span class="eyebrow">02 / EDITOR · ACTOR FOR JOHN</span><h3>The Pineapple Incident</h3><p>A satirical short, written by the Actor for Maria and Directed by a classmate, and edited by me, as a project for our Audio for Digital Film class.</p></div>
+    </article>
+    <article class="archive-card archive-empty">
+      <div class="archive-media archive-placeholder" aria-label="Placeholder for future film project 03"><span>FILM STILL / VIDEO 03</span></div>
+      <div class="archive-info"><span class="eyebrow">03 / FUTURE PROJECT</span><h3>Film project 03</h3><p>Description placeholder — title, your role, synopsis, and creative reflection.</p></div>
+    </article>
+    <article class="archive-card archive-empty">
+      <div class="archive-media archive-placeholder" aria-label="Placeholder for future film project 04"><span>FILM STILL / VIDEO 04</span></div>
+      <div class="archive-info"><span class="eyebrow">04 / FUTURE PROJECT</span><h3>Film project 04</h3><p>Description placeholder — title, your role, synopsis, and creative reflection.</p></div>
+    </article>
+    <article class="archive-card archive-empty">
+      <div class="archive-media archive-placeholder" aria-label="Placeholder for future film project 05"><span>FILM STILL / VIDEO 05</span></div>
+      <div class="archive-info"><span class="eyebrow">05 / FUTURE PROJECT</span><h3>Film project 05</h3><p>Description placeholder — title, your role, synopsis, and creative reflection.</p></div>
+    </article>
+    <article class="archive-card archive-empty">
+      <div class="archive-media archive-placeholder" aria-label="Placeholder for future film project 06"><span>FILM STILL / VIDEO 06</span></div>
+      <div class="archive-info"><span class="eyebrow">06 / FUTURE PROJECT</span><h3>Film project 06</h3><p>Description placeholder — title, your role, synopsis, and creative reflection.</p></div>
+    </article>
+  </div>
+</section>
+<section id="testimonials" class="testimonials-section" aria-labelledby="testimonials-title">
+  <div class="testimonials-heading"><div><p class="eyebrow">04 / Professional perspectives</p><h2 id="testimonials-title">Testimonials<span>.</span></h2></div><div class="testimonial-controls"><button type="button" id="testimonial-prev" aria-label="Previous testimonials">←</button><button type="button" id="testimonial-next" aria-label="Next testimonials">→</button></div></div>
+  <p class="testimonials-intro">A place for professional reflections on my work and collaboration. Testimonials will be added with each contributor's approval.</p>
+  <div class="testimonials-track" id="testimonials-track" tabindex="0" aria-label="Testimonial cards">
+    <article class="testimonial-card">
+      <div class="testimonial-person"><div class="testimonial-avatar" role="img" aria-label="Headshot placeholder for future testimonial contributor 1"><span>PHOTO</span></div><div><h3>Contributor name</h3><p>Professional title / affiliation</p></div></div>
+      <div class="testimonial-quote"><p>Testimonial placeholder — a genuine reflection on my work, professionalism, collaboration, or creative contributions will appear here.</p></div>
+      <span class="testimonial-number">01 / 04</span>
+    </article>
+    <article class="testimonial-card">
+      <div class="testimonial-person"><div class="testimonial-avatar" role="img" aria-label="Headshot placeholder for future testimonial contributor 2"><span>PHOTO</span></div><div><h3>Contributor name</h3><p>Professional title / affiliation</p></div></div>
+      <div class="testimonial-quote"><p>Testimonial placeholder — a genuine reflection on my work, professionalism, collaboration, or creative contributions will appear here.</p></div>
+      <span class="testimonial-number">02 / 04</span>
+    </article>
+    <article class="testimonial-card">
+      <div class="testimonial-person"><div class="testimonial-avatar" role="img" aria-label="Headshot placeholder for future testimonial contributor 3"><span>PHOTO</span></div><div><h3>Contributor name</h3><p>Professional title / affiliation</p></div></div>
+      <div class="testimonial-quote"><p>Testimonial placeholder — a genuine reflection on my work, professionalism, collaboration, or creative contributions will appear here.</p></div>
+      <span class="testimonial-number">03 / 04</span>
+    </article>
+    <article class="testimonial-card">
+      <div class="testimonial-person"><div class="testimonial-avatar" role="img" aria-label="Headshot placeholder for future testimonial contributor 4"><span>PHOTO</span></div><div><h3>Contributor name</h3><p>Professional title / affiliation</p></div></div>
+      <div class="testimonial-quote"><p>Testimonial placeholder — a genuine reflection on my work, professionalism, collaboration, or creative contributions will appear here.</p></div>
+      <span class="testimonial-number">04 / 04</span>
+    </article>
+  </div>
+  <p class="testimonial-hint">Scroll or use the arrows to explore <span id="testimonial-position" aria-live="polite">1 / 4</span></p>
+</section>
+<section id="contact" class="contact-section" aria-labelledby="contact-title">
+  <p class="eyebrow">05 / Get in touch</p><h2 id="contact-title">Contact<span>.</span></h2>
+  <p>For professional inquiries, collaborations, and opportunities, you can reach me here.</p>
+  <div class="contact-links"><a href="mailto:drewbloomfield@cedarville.edu">drewbloomfield@cedarville.edu ↗</a><a href="https://www.linkedin.com/in/drewbl/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div>
+  <a href="#home" class="underlined-link">Back to the beginning ↑</a>
+</section>
 </main>
-<footer><div class="wrap footer-row"><span>Drew Bloomfield</span><span class="draft">Layout draft · Sample placeholders</span><a href="#home">Back to top ↑</a></div></footer>
-<dialog id="project-dialog" aria-labelledby="project-title"><div class="dialog-top"><span class="eyebrow">Project layout preview</span><button class="close" type="button">Close ×</button></div><div class="video-placeholder" id="project-video-placeholder">Your film will appear here</div><iframe id="project-video-embed" title="Film Project 01 video" hidden loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="width:100%;aspect-ratio:16/9;border:0;display:none"></iframe><h2 id="project-title">Film project</h2><p>Your role · Year · Running time</p><p>This space will introduce the film, explain your contribution, and share any credits or behind-the-scenes details you want visitors to see.</p></dialog>
-<script src="./script.js?v=film01-20261113"></script>
+<footer><span>© <span id="copyright-year">2026</span> Drew Bloomfield</span><span>FILM / STORYTELLING</span><a href="#home">BACK TO TOP ↑</a></footer>
+<dialog id="film-dialog" aria-labelledby="dialog-title">
+  <div class="dialog-top"><div><p class="eyebrow">NOW VIEWING</p><h2 id="dialog-title">Film</h2></div><button id="close-dialog" type="button" aria-label="Close video">Close ×</button></div>
+  <div class="player-frame"><iframe id="dialog-player" title="Film playback" allow="autoplay; encrypted-media; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+  <p id="dialog-role"></p><p id="dialog-description"></p><a id="dialog-link" href="#" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a>
+</dialog>
 </body>
 </html>
