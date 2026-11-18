@@ -142,3 +142,7 @@ body.film-focus-active .hover-film.is-focused{z-index:100;transform:scale(1.03);
 }
 #testimonials .testimonial-quote{flex:1;min-height:245px;padding-top:26px}
 #testimonials .testimonial-card{box-sizing:border-box}
+
+/* Pages: single caption replacing the two-column story/intention labels. */
+#pages .film-notes.film-caption{display:block;padding-top:24px}
+#pages .film-notes.film-caption p{font:16px/1.8 Georgia,serif;max-width:850px}
