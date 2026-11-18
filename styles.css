@@ -146,3 +146,7 @@ body.film-focus-active .hover-film.is-focused{z-index:100;transform:scale(1.03);
 /* Pages: single caption replacing the two-column story/intention labels. */
 #pages .film-notes.film-caption{display:block;padding-top:24px}
 #pages .film-notes.film-caption p{font:16px/1.8 Georgia,serif;max-width:850px}
+
+/* Pages caption spans full width beneath its title divider. */
+#pages .film-notes.film-caption{display:block!important;width:100%;max-width:none;grid-template-columns:none!important}
+#pages .film-notes.film-caption>p{display:block!important;width:100%;max-width:none!important;grid-column:auto!important;font:16px/1.8 Georgia,serif}
